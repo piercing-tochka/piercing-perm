@@ -1,0 +1,319 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,600,italic&display=swap);
+
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  color: #000000;
+  background-color: #F6ebd3;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 51.25rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375pxrem;
+}
+
+[class*=__container_wide] {
+  max-width: 105rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header__container-logo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin-top: 30px;
+  -webkit-filter: drop-shadow(15px 15px 15px #222);
+  filter: drop-shadow(0px 0px 0px #222);
+}
+
+.header__container-title {
+  font-size: 0.875rem;
+  color: #757575;
+  margin-top: 15px;
+}
+
+.header__container-desc {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.header__container-delimiter {
+  margin-top: 50px;
+  height: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.header__container-delimiter-img0 {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.header__container-delimiter-img {
+  width: 20px;
+  height: 20px;
+}
+
+.header__container-delimiter::before {
+  content: "";
+  /* создаём инлайн объект */
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), to(rgba(255, 249, 241, 0)));
+  background: -o-linear-gradient(left, rgb(0, 0, 0) 0%, rgba(255, 249, 241, 0) 100%);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(255, 249, 241, 0) 100%);
+  top: 0;
+  left: 55%;
+  width: 45%;
+  height: 1px;
+  opacity: 0.5;
+  top: 50%;
+}
+
+.header__container-delimiter::after {
+  content: "";
+  /* создаём инлайн объект */
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: -webkit-gradient(linear, right top, left top, from(rgb(0, 0, 0)), to(rgba(255, 249, 241, 0)));
+  background: -o-linear-gradient(right, rgb(0, 0, 0) 0%, rgba(255, 249, 241, 0) 100%);
+  background: linear-gradient(-90deg, rgb(0, 0, 0) 0%, rgba(255, 249, 241, 0) 100%);
+  width: 45%;
+  height: 1px;
+  opacity: 0.5;
+  top: 50%;
+  right: 55%;
+}
+
+.page {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.page__btn {
+  width: 60%;
+  padding: 20px 0;
+  margin: 20px 0px 0 0px;
+  border-radius: 4px;
+  background: rgb(210, 152, 51);
+  background: -o-linear-gradient(143deg, rgb(210, 152, 51) 8%, rgb(236, 195, 44) 66%);
+  background: linear-gradient(307deg, rgb(210, 152, 51) 8%, rgb(236, 195, 44) 66%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page__btn:hover {
+  background: rgb(236, 195, 44);
+  background: -o-linear-gradient(143deg, rgb(236, 195, 44) 8%, rgb(210, 152, 51) 66%);
+  background: linear-gradient(307deg, rgb(236, 195, 44) 8%, rgb(210, 152, 51) 66%);
+}
+
+.page__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 30px;
+  -webkit-transform: translate(-100px) rotate(30deg) scale(2);
+      -ms-transform: translate(-100px) rotate(30deg) scale(2);
+          transform: translate(-100px) rotate(30deg) scale(2);
+  -webkit-animation: button-glare 10s infinite linear;
+  animation: button-glare 10s infinite linear;
+}
+
+@-webkit-keyframes button-glare {
+  0%, 90% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: translate(-100px) rotate(30deg) scale(2);
+            transform: translate(-100px) rotate(30deg) scale(2);
+  }
+
+  100% {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: translate(1000px) rotate(30deg) scale(2);
+            transform: translate(1000px) rotate(30deg) scale(2);
+  }
+}
+
+.page .btn-block {
+  margin-top: 50px;
+}
+
+.page__btn-link {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.page__btn2 {
+  width: 60%;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-radius: 4px;
+  background: rgb(210, 152, 51);
+  background: -o-linear-gradient(143deg, rgb(210, 152, 51) 8%, rgb(236, 195, 44) 66%);
+  background: linear-gradient(307deg, rgb(210, 152, 51) 8%, rgb(236, 195, 44) 66%);
+}
+
+.page__btn2:hover {
+  background: rgb(236, 195, 44);
+  background: -o-linear-gradient(143deg, rgb(236, 195, 44) 8%, rgb(210, 152, 51) 66%);
+  background: linear-gradient(307deg, rgb(236, 195, 44) 8%, rgb(210, 152, 51) 66%);
+}
+
+.page__btn-link2 {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-weight: 700;
+}
