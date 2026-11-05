@@ -681,3 +681,13 @@ html[data-theme="dark"] .studio-page #catalogLink {
   .studio-page .studio-master-card .action-copy small { font-size: 9px; }
 }
 
+
+
+/* Keep master names clear of portraits on phone screens. */
+@media (max-width: 599px) {
+  .hero--ekaterina #masterName,
+  .hero--natalia #masterName {
+    font-size: clamp(36px, 10vw, 46px);
+    letter-spacing: -.045em;
+  }
+}
